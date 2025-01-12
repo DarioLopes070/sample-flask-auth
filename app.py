@@ -89,9 +89,6 @@ def delete_user(id_user):
         db.session.commit()
         return jsonify({"message": f"Usuario {id_user} deletado com sucesso"})
     return jsonify({"message": "Usuario nao encontrado"}), 404
-@app.route("/hello_world", methods=["GET"])
-def hello_world():
-    return "hello world"
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
