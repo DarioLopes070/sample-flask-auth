@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_USER: "amdin"
+      MYSQL_PASSWORD: "amdin123"
+      MYSQL_DATABASE: "flask-crud"
+      MYSQL_ROOT_PASSWORD: "amdin123"
+
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - ./mysql:/var/lib/mysql    
